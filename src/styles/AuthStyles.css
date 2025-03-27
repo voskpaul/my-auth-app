@@ -1,0 +1,139 @@
+/* AuthStyles.css - Improved styling for better form alignment */
+
+/* Light mode styles */
+:root {
+    --bg-color: #f9fafb;
+    --text-color: #111827;
+    --input-bg: #ffffff;
+    --input-border: #d1d5db;
+    --button-bg: #3b82f6;
+    --button-hover-bg: #2563eb;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] {
+    --bg-color: #1f2937;
+    --text-color: #f3f4f6;
+    --input-bg: #374151;
+    --input-border: #4b5563;
+    --button-bg: #2563eb;
+    --button-hover-bg: #1d4ed8;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 2rem;
+    background-color: var(--input-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--button-bg);
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container .input-field {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+small {
+    display: block;
+    text-align: left;
+    margin-top: -5px;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.button-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-bg);
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.button-primary:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Social Login Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-button {
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-button:hover {
+    transform: scale(1.1);
+}
+
+.google { background-color: #db4437; }
+.facebook { background-color: #1877f2; }
+.linkedin { background-color: #0077b5; }
+github { background-color: #333; }
+
+/* Link Styles */
+.auth-link {
+    color: var(--button-bg);
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
